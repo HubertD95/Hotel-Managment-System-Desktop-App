@@ -1,0 +1,41 @@
+﻿<Window x:Class="inz_vol._2.DodajRezerwacjeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inz_vol._2"
+        mc:Ignorable="d"
+        Title="Dodaj Rezerwacje" Height="308.333" Width="304"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="212*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="TB_Imie" HorizontalAlignment="Left" Height="23" Margin="112,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1" IsEnabled="False" TextChanged="TextChange" />
+        <Button x:Name="Btn_zapisz_rezerwacje" Content="Zapisz" HorizontalAlignment="Left" Margin="46,174,0,0" VerticalAlignment="Top" Width="75" Click="Btn_zapisz_rezerwacje_Click" Grid.Row="1" IsEnabled="False"/>
+        <Button x:Name="Btn_anuluj_rezerwacje" Content="Anuluj" HorizontalAlignment="Left" Margin="176,174,0,0" VerticalAlignment="Top" Width="75" Click="Btn_anuluj_rezerwacje_Click" Grid.Row="1"/>
+        <Label Content="Imie:" HorizontalAlignment="Left" Margin="46,64,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <TextBox x:Name="TB_Nazwisko" HorizontalAlignment="Left" Height="23" Margin="112,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1" IsEnabled="False" TextChanged="TextChange" />
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="46,22,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="Nr. Pokoju:" HorizontalAlignment="Left" Margin="46,43,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+
+        <Button x:Name="Btn_Poczatek" Content="Od kiedy" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" Width="75" Click="Btn_poczatek_Click"/>
+        <Button x:Name="Btn_koniec" Content="Do kiedy" HorizontalAlignment="Left" Margin="53,30,0,0" VerticalAlignment="Top" Width="75" Click="Btn_koniec_Click"/>
+        <Label x:Name="Label_Poczatek" Content="" HorizontalAlignment="Left" Margin="133,8,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.828,1.064" Width="99"/>
+        <Label x:Name="Label_Koniec" Content="" HorizontalAlignment="Left" Margin="133,30,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label Content="Posiłki:" HorizontalAlignment="Left" Margin="46,71,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox x:Name="TB_Opis" HorizontalAlignment="Left" Height="51" Margin="112,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1" IsEnabled="False"/>
+        <Label Content="Opis:" HorizontalAlignment="Left" Margin="46,102,0,0" VerticalAlignment="Top" Height="58" Grid.Row="1"/>
+        <ComboBox x:Name="CB_Posilki" HorizontalAlignment="Left" Margin="112,75,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" IsEnabled="False" SelectionChanged="SelectionChange" >
+            <ComboBoxItem Content="Brak"/>
+            <ComboBoxItem Content="1 Posiłek"/>
+            <ComboBoxItem Content="2 Posiłek"/>
+            <ComboBoxItem Content="3 Posiłki"/>
+        </ComboBox>
+        <ComboBox x:Name="CB_nr_pok" HorizontalAlignment="Left" Margin="112,48,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" IsEnabled="False" SelectionChanged="SelectionChange"></ComboBox>
+        <Calendar x:Name="Kalendarz" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDatesChanged="Kalendarz_SelectedDatesChanged" Margin="53,45,0,0" Visibility="Hidden" Grid.RowSpan="2"/>
+        <Calendar x:Name="Kalendarz2" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDatesChanged="Kalendarz2_SelectedDatesChanged" Margin="53,48,0,0" Visibility="Hidden" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
